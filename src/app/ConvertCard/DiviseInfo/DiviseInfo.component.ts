@@ -23,7 +23,7 @@ export class DiviseInfoComponent implements OnInit {
 
   getBuyValue() {
     const otroNumero: number =
-      this.valueService.obtenerValor() 
+      this.valueService.getTabSelected()
         ? this.valueService.getBlueInfo().value_buy 
         : this.valueService.getOficialInfo().value_buy
       ;
@@ -33,7 +33,7 @@ export class DiviseInfoComponent implements OnInit {
   }  
   getSellValue() {
     const otroNumero: number = 
-      this.valueService.obtenerValor() 
+      this.valueService.getTabSelected() 
         ? this.valueService.getBlueInfo().value_sell
         : this.valueService.getOficialInfo().value_sell
       ;
@@ -43,7 +43,7 @@ export class DiviseInfoComponent implements OnInit {
   }
   getAVGValue() {
     const otroNumero: number =
-      this.valueService.obtenerValor()
+      this.valueService.getTabSelected()
         ? this.valueService.getBlueInfo().value_avg
         : this.valueService.getOficialInfo().value_avg
       ;

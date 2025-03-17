@@ -2,19 +2,30 @@
   <h3 class="Calculadora_title"> Calculadora </h3>
   <label class="Calculadora_Option">
     <span class="Calculadora_Option_Label"> Peso Argentino </span>
-    <input class="Calculadora_Option_Input" type="number" value="23.11">
+    <input 
+      class="Calculadora_Option_Input" type="number"
+      [(ngModel)]="this.resultAVG" (ngModelChange)="changeAVGValue($event)"
+    >
     <h5 class="Calculadora_Option_Divise"> ARG </h5>
   </label>
 
   <label class="Calculadora_Option">
-    <span class="Calculadora_Option_Label"> SOL </span>
-    <input class="Calculadora_Option_Input" type="number" value="23.11">
+    <span class="Calculadora_Option_Label"> {{ this.diviseCode }} </span>
+    <input 
+      class="Calculadora_Option_Input" type="number"
+      [(ngModel)]="this.resultOtherDivise" (ngModelChange)="changeOtherDiviseValue($event)"
+    >
     
-    <button class="Calculadora_Option_Button">
-      <h5 class="Calculadora_Option_Title"> PEN </h5>
+    <button class="Calculadora_Option_Button" (click)="togglePanel()">
+      <h5 class="Calculadora_Option_Title"> {{ this.divise }} </h5>
       <svg class="Calculadora_Option_Icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.6875 7.6875L5.9375 3.9375M5.9375 3.9375L2.1875 7.6875M5.9375 3.9375V17.0625M17.8125 13.3125L14.0625 17.0625M14.0625 17.0625L10.3125 13.3125M14.0625 17.0625V3.9375" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>        
+      </svg>    
     </button>
+    <section class="Calculadora_Option_Panel" *ngIf="showPanel">
+      <div class="Calculadora_Option_Panel_Item" *ngFor="let item of this.divises" (click)="changeDivise(item)">
+        {{ item.name }} - {{ item.code }}
+      </div>
+    </section>
   </label>
 </main>

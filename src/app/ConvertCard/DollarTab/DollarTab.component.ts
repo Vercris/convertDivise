@@ -9,7 +9,7 @@ import { ConvertCardService } from "../ConvertCard.service";
 export class DollarTabComponent implements OnInit {
 
   constructor(private valueService: ConvertCardService) {
-    this.tabSelected = valueService.obtenerValor();
+    this.tabSelected = valueService.getTabSelected();
   }
 
   ngOnInit() {}
