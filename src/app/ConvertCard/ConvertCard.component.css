@@ -1,0 +1,50 @@
+.ConvertCard {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #1D1D1D;
+    border: 1px solid #3B3B3B;
+    z-index: 100;
+}
+
+
+.gg-spinner {
+    transform: scale(var(--ggs, 1));
+  }
+  .gg-spinner,
+  .gg-spinner::after,
+  .gg-spinner::before {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+  }
+  .gg-spinner::after,
+  .gg-spinner::before {
+    content: "";
+    position: absolute;
+    border-radius: 100px;
+  }
+  .gg-spinner::before {
+    animation: spinner 1s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+    border: 7px solid transparent;
+    border-top-color: white;
+  }
+  .gg-spinner::after {
+    border: 7px solid;
+    opacity: 0.2;
+  }
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  

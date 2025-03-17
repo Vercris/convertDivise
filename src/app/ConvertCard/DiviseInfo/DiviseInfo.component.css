@@ -1,0 +1,39 @@
+.DiviseInfo {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+}
+.DiviseInfo_Item {
+    box-sizing: border-box;
+    display: flex;
+    gap: 0;
+    height: fit-content;
+    flex-direction: column;
+    padding: 0 10px;
+    margin: 0;
+}
+.DiviseInfo_Item_Title {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: start;
+    display: block;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.DiviseInfo_Item_Value {
+    display: block;
+    text-align: start;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+.divider {
+    box-sizing: border-box; 
+    display: block; 
+    width: 1px; 
+    height: 50px; 
+    background: white;
+}

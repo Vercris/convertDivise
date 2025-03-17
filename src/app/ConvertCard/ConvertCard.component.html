@@ -1,0 +1,16 @@
+
+
+<div *ngIf="estado == 'load'">
+  <i class="gg-spinner"></i>
+</div>
+
+<main class="ConvertCard" *ngIf="estado == 'success'">
+  <app-DollarTab/>
+  <app-DiviseInfo/>
+  <app-Calculadora/>
+  <app-BtnShare/>
+</main>
+
+<div *ngIf="estado == 'error'">
+  <p>Error!</p>
+</div>

@@ -1,0 +1,54 @@
+.BtnShare {
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 1rem;
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(180deg, #FA683C, #FB501D);
+    background-color: transparent;
+    border: 1px solid #FB501D;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #FA8966;
+    -moz-box-shadow: inset 0px 1px 0px 0px #FA8966;
+    box-shadow: inset 0px 1px 0px 0px #FA8966;
+    z-index: 2;
+    transition: transform 0.3s;
+}
+
+.BtnShare::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(251, 80, 29, 0.9);
+    filter: blur(3rem);
+    z-index: -1; 
+}
+
+.BtnShare_Btn {
+    z-index: 3;
+    color: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.BtnShare:hover {
+    transform: scale(1.03);
+}
+
+.BtnShare_Title {
+    font-size: 1.2rem;
+    z-index: 5;
+}
